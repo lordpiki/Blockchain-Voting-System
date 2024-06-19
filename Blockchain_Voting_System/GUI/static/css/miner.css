@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: black;
+    color: #00ff00;
+}
+
+.container {
+    width: 80%;
+    margin: 15vh auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.dashboard {
+    color: rgb(0, 255, 0, 1);
+    font-family: 'Space Mono', monospace;
+
+    text-shadow: #00af00 0 0 60px;
+    
+    text-align: center;
+    scale: 1.2;
+}
+
+.refresh-button{
+    font-family: 'Space Mono', monospace;
+
+    background: transparent;
+    border-radius: 10px;
+    backdrop-filter: blur(7px) brightness(100%);
+    background-image: linear-gradient(to bottom right, rgba(100, 100, 100, 0.2), rgba(0, 0, 0, 0.2));
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+    color: #00ff00;
+    font-size: 17px;
+    padding: 13px;
+    text-align: center;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    font-family: 'Space Mono', monospace;
+
+}
+
+.refresh-button:hover {
+    color: #00e800b9;
+    /* background-image: linear-gradient(to bottom right, rgba(100, 100, 100, 0.2), rgba(0, 0, 0, 0.2)); */
+    border: 2px solid rgba(128, 128, 128, 0.1);
+}
+
+.refresh-button:active {
+    color: #00af0067;
+    background-image: linear-gradient(to bottom right, rgba(54, 54, 54, 0), rgba(0, 0, 0, 0));
+    border: 2px solid rgba(76, 76, 76, 0.1);
+}
+
+
+.card {
+    font-family: 'Space Mono', monospace;
+
+    height: 60%;
+    width: 40%;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom right, rgba(124, 124, 124, 0.2), rgba(0, 0, 0, 0.2));
+    backdrop-filter: blur(9px);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+}
+.card>i {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 2.5rem;
+}
+.card>div>p {
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    margin-top: 10px;
+    font-size: 28px;
+    font-family: 'Space Mono', monospace;
+}
+.card>p {
+    position: absolute;
+    bottom: 10%;
+    fill: #fff;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.card>div>h1 {
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.dashboard {
+    color: rgb(0, 255, 0, 1);
+    font-family: 'Space Mono', monospace;
+
+    text-shadow: #00af00 0 0 60px;
+    
+    text-align: center;
+    scale: 1.2;
+}
+
+
+.container {
+    width: 80%;
+    margin: 15vh auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.blocks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    position: relative;
+}
+
+.block {
+    font-family: 'Space Mono', monospace;
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom right, rgba(124, 124, 124, 0.2), rgba(0, 0, 0, 0.2));
+    backdrop-filter: blur(7px);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+    text-align: center; /* Added property */
+    margin: 5px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.block p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.block h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.chain-element {
+    position: relative;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 3px solid #00ff00;
+    margin: 8px;
+
+}
+
+.chain-element::before {
+    content: "";
+    position: absolute;
+    background-color: #00ff00;
+    width: 20px;
+    height: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20px;
+}
+
+
+.chain-element:nth-child(4n)::after {
+    content: "";
+    position: absolute;
+    background-color: #00ff00;
+    width: 20px;
+    height: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20px;
+}

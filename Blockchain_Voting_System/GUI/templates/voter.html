@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='icons/vote.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/vote.css') }}">
+    <title>Voting App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="dashboard">
+                
+                <h1>Welcome voter</h1>
+                <h2>Made by Miki & Noga</h2>
+                
+                <label for="candidateNumber">Choose Candidate Number (1-9):</label>
+                <input type="number" id="candidateNumber" min="1" max="9" required></input>
+                
+                <button id="voteButton" class="button">Vote</button>
+                
+                <a href="view_votes" class="button">View Votes</a>
+            </div>
+        </div>
+    </div>
+        
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <p>Processing vote</p>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+    
+    <canvas id="circuitCanvas" style="position: absolute; top: 0; left: 0; z-index: -1;"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/vote.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/circuit.js') }}"></script>
+</body>
+</html>

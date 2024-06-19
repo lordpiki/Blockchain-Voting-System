@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+
+.container canvas {
+    color: white;
+    margin: 20px;
+    border: 1px solid #5555555f;
+    border-radius: 5px;
+    /* box-shadow: 0 0 80px rgba(0, 0, 0, 0.8); */
+    background-color: #44955e32;
+}
+
+
+.button{
+    background: transparent;
+    border-radius: 10px;
+    backdrop-filter: blur(7px) brightness(100%);
+    background-image: linear-gradient(to bottom right, rgba(100, 100, 100, 0.2), rgba(0, 0, 0, 0.2));
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+    color: #00ff00;
+    font-size: 17px;
+    padding: 13px;
+    text-align: center;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    font-family: 'Space Mono', monospace;
+    text-decoration: none;
+
+}
+
+.button:hover {
+    color: #00e800b9;
+    /* background-image: linear-gradient(to bottom right, rgba(100, 100, 100, 0.2), rgba(0, 0, 0, 0.2)); */
+    border: 2px solid rgba(128, 128, 128, 0.1);
+}
+
+.button:active {
+    color: #00af0067;
+    background-image: linear-gradient(to bottom right, rgba(54, 54, 54, 0), rgba(0, 0, 0, 0));
+    border: 2px solid rgba(76, 76, 76, 0.1);
+}
+
+
+.red-bg {
+    background-image: linear-gradient(to bottom right, rgba(133, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
+}
+
+.blue-bg {
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 133, 0.3), rgba(0, 0, 0, 0.2));
+}
+
+.green-bg {
+    background-image: linear-gradient(to bottom right, rgba(0, 133, 0, 0.3), rgba(0, 0, 0, 0.2));
+}
+
+.card {
+    font-family: 'Space Mono', monospace;
+    height: 60%;
+    width: 40%;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom right, rgba(124, 124, 124, 0.2), rgba(0, 0, 0, 0.2));
+    backdrop-filter: blur(9px);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+}
+.card>i {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 2.5rem;
+}
+.card>div>p {
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    margin-top: 10px;
+    font-size: 28px;
+    font-family: 'Space Mono', monospace;
+}
+.card>p {
+    position: absolute;
+    bottom: 10%;
+    fill: #fff;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.card>div>h1 {
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+
+.container {
+    width: 80%;
+    margin: 30vh auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.dashboard {
+    color: rgb(0, 255, 0, 1);
+    font-family: 'Space Mono', monospace;
+
+    text-shadow: #00af00 0 0 60px;
+    
+    text-align: center;
+    scale: 1.2;
+}

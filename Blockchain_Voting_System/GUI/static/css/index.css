@@ -1,0 +1,114 @@
+body {
+    display: flex; /* Make the body a flex container */
+    background-color: black;
+    overflow: hidden;
+    margin: 0px;
+  }
+  
+  .container-full {
+    /* position: relative */
+    width: 100%; /* Set width to 100% */
+    flex: 1; /* Divide the space equally between sides */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text within each side */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: black;
+    transition: all 0.3s ease;
+
+    
+  }
+  
+  .container-full:hover {
+   opacity: 0.2;
+  }
+
+  .container-half {
+    width: 100%; /* Set width to 100% */
+    flex: 1; /* Divide the space equally between sides */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text within each side */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: black;
+    transition: all 0.3s ease;
+
+  }
+
+  .container-half:hover {
+    opacity: 0.2;
+  }
+
+  .container canvas {
+    pointer-events: none;
+
+    position: absolute; /* Position canvas behind content */
+    top: 0;
+    left: 0;
+    width: 50%; /* Stretch canvas to fill container */
+    height: 90%; /* Stretch canvas to fill container */
+    z-index: -1; /* Set a lower z-index */
+
+  }
+  
+  .divider {
+    width: 4px; /* Set width of the dividing line */
+    height: 100vh; /* Set height to 100% viewport height */
+    background-color: rgb(0, 130, 0); /* Set color of the line */
+  }
+  
+  .title {
+    font-family: 'Space Mono', monospace;
+    color: #00ff00; /* Set text color */
+    font-size: 3em; /* Set font size for titles */
+    font-weight: bold; /* Make titles bold */
+  }
+
+
+  /* Existing styles */
+
+  .modal {
+    display: none; /* Initially hide the modal */
+
+    backdrop-filter: blur(5px);
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text within each side */ 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text within each side */ 
+    margin: 0 auto; /* Adjust margin to be in the center */
+    padding: 20px;
+    /* border: 1px solid #888; */
+    border-radius: 5px;
+    width: 50%; 
+    position: absolute; /* Change to absolute positioning */
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Centering trick */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    /* text-decoration: none; */
+    cursor: pointer;
+}

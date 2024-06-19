@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='icons/miner.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/miner.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Inconsolata|Source+Code+Pro|Roboto+Mono|Hack|Cousine|Droid+Sans+Mono|Fira+Mono|Monoid|PT+Mono|Space+Mono|Ubuntu+Mono|VT323|Cutive+Mono&display=swap">
+
+    <title>Miner Page</title>
+</head>
+
+<body>
+    <div class="container", id="container">
+        <div class="card">
+            <div class="dashboard">
+                <h2>MINER DASHBOARD</h2>
+                    <div class="stats", id="stats">
+                        <p>IS MINING: 0</p>
+                        <p>VOTES IN QUEUE: 0</p>
+                        <p>BLOCK COUNT: 1</p>
+                    </div>
+                <button id="refresh-button" class="refresh-button" onclick="updateStats()">REFRESH</button>
+
+                
+            </div>
+        </div>
+
+        <div class="chain">
+            <div class="blocks">
+                <!-- Dummy block 1 -->
+                <div class="block">
+                    <h3>BLOCK: 0</h3>
+                    <p>VOTES: 0</p>
+                    <p>HASH: 000F21AC06ACEB9</p>
+                    <p>PREVIOUS HASH: None</p>
+                </div>
+
+            </div>
+        </div>
+
+        <canvas id="canvas" style="position: absolute; top: 0; left: 0; z-index: -1;"></canvas>
+    </div>
+    <script src="{{ url_for('static', filename='js/backgroundLetters.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/letterShuffle.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/update.js') }}"></script>
+<body>

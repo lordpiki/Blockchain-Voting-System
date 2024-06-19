@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting System</title>
+  <link rel="icon" href="{{ url_for('static', filename='icons/blockchain.png') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/vote.css') }}">
+
+</head>
+<body>
+  <div id="ipModal" class="modal">
+    <div class="modal-content">
+          <div class="card">
+            <div class="dashboard">
+              <h1>Enter Server IP Address</h1>
+            <span class="close">&times;</span>
+            <form id="submitForm">
+              <input name="ipInput" type="text" id="ipInput" placeholder="Example: 127.0.0.1">
+              <button id="submitIP" class="button" type="submit">Submit</button>
+            </form>
+
+          </div>
+          </div>
+    </div>
+  </div>
+
+    <canvas id="canvas" style="position: absolute; top: 10; left: 10; z-index: -1;"></canvas>
+    <div class="container-full" onclick="window.location.href='/miner'">
+        <h1 class="title">MINER</h1>
+    </div>
+    <div class="divider"></div>
+    <canvas id="circuitCanvas" style="position: absolute; top: 10; left: 50vw; z-index: -1;"></canvas>
+    <div class="container-half" onclick="window.location.href='/voter'">
+        <h1 class="title">VOTER</h1>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/circuit.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/backgroundLetters.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='icons/graph.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/view_votes.css') }}">
+    <title>View Votes</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="dashboard">
+            
+                <h1>View Votes</h1>
+                <canvas id="voteChart" width="400" height="200"></canvas>
+                
+                <a href="/voter" class="button">Return</a>
+                <button id="refresh" class="button">Refresh</button>
+            </div>
+        </div>
+
+    </div>
+    <canvas id="circuitCanvas" style="position: absolute; top: 0; left: 0; z-index: -1;"></canvas>
+    <script src="{{ url_for('static', filename='js/circuit.js') }}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/votes.js') }}"></script>
+</body>
+</html>

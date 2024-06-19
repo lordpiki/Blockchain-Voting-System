@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: black;
+    color: #00ff00;
+}
+
+.container {
+    width: 80%;
+    margin: 30vh auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.dashboard {
+    color: rgb(0, 255, 0, 1);
+    font-family: 'Space Mono', monospace;
+
+    text-shadow: #00af00 0 0 60px;
+    
+    text-align: center;
+    scale: 1.2;
+}
+
+.button{
+    background: transparent;
+    border-radius: 10px;
+    backdrop-filter: blur(7px) brightness(100%);
+    background-image: linear-gradient(to bottom right, rgba(100, 100, 100, 0.2), rgba(0, 0, 0, 0.2));
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+    color: #00ff00;
+    font-size: 17px;
+    padding: 13px;
+    text-align: center;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    font-family: 'Space Mono', monospace;
+    text-decoration: none;
+
+}
+
+.button:hover {
+    color: #00e800b9;
+    /* background-image: linear-gradient(to bottom right, rgba(100, 100, 100, 0.2), rgba(0, 0, 0, 0.2)); */
+    border: 2px solid rgba(128, 128, 128, 0.1);
+}
+
+.button:active {
+    color: #00af0067;
+    background-image: linear-gradient(to bottom right, rgba(54, 54, 54, 0), rgba(0, 0, 0, 0));
+    border: 2px solid rgba(76, 76, 76, 0.1);
+}
+
+
+.card {
+    font-family: 'Space Mono', monospace;
+
+    height: 60%;
+    width: 40%;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom right, rgba(124, 124, 124, 0.2), rgba(0, 0, 0, 0.2));
+    backdrop-filter: blur(9px);
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+}
+.card>i {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 2.5rem;
+}
+.card>div>p {
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    margin-top: 10px;
+    font-size: 28px;
+    font-family: 'Space Mono', monospace;
+}
+.card>p {
+    position: absolute;
+    bottom: 10%;
+    fill: #fff;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.card>div>h1 {
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.dashboard {
+    color: rgb(0, 255, 0, 1);
+    font-family: 'Space Mono', monospace;
+
+    text-shadow: #00af00 0 0 60px;
+    
+    text-align: center;
+    scale: 1.2;
+}
+
+h1 {
+    font-family: 'Space Mono', monospace;
+
+    margin-bottom: 10px;
+}
+
+label {
+    font-family: 'Space Mono', monospace;
+
+    display: block;
+    margin-bottom: 10px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+/* -webkit-appearance: none; */
+/* margin: 0; */
+background-color: transparent;
+color: #00ff00;
+}
+input {
+
+    outline: none;
+    width: 80%;
+    padding: 8px;
+    margin: 10px;
+    box-sizing: border-box;
+
+    margin-bottom: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #00ff00;
+    font-family: 'Space Mono', monospace;
+}
+
+
+.loading-overlay {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-content {
+    z-index: 1000;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-content {
+    z-index: 1000;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading-spinner {
+    z-index: 1000;
+    border: 6px solid #ffffff3f;
+    border-top: 6px solid #00ff00;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    align-self: center;
+    animation: spin 1s linear infinite;
+}
